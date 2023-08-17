@@ -11,7 +11,7 @@ RUN microdnf install -y python3 python3-pip
 
 RUN update-ca-trust extract
 ENV PIP_INDEX_URL='XXX'
-RUN python3 -m pip install -r /tmp/requirements.txt
+#RUN python3 -m pip install -r /tmp/requirements.txt
 WORKDIR /app/forwarder
 ENV PYTHONUNBUFFERED=0
 ENV WEBHOOKPORT=9091
