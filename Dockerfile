@@ -6,7 +6,7 @@ LABEL description="Alert forwarder for Prometheus/Alertmanager alerts to Splunk 
 RUN microdnf install -y python3 python3-pip
 
 #COPY certs/ /etc/pki/ca-trust/source/anchors
-#COPY forwarder/ /app/forwarder
+COPY wsgi.py /app/forwarder
 COPY requirements.txt /tmp/requirements.txt
 
 RUN update-ca-trust extract
