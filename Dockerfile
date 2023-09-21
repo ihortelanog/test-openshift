@@ -10,7 +10,7 @@ RUN microdnf install -y python3 python3-pip
 COPY requirements.txt /tmp/requirements.txt
 
 RUN update-ca-trust extract
-ENV PIP_INDEX_URL='XXX'
+#ENV PIP_INDEX_URL='XXX'
 RUN python3 -m pip install git+https://github.com/benoitc/gunicorn.git
 WORKDIR /app/forwarder
 ENV PYTHONUNBUFFERED=0
