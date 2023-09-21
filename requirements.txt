@@ -1,2 +1,1 @@
 gunicorn
-mod_wsgi==4.5.15
