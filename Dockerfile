@@ -11,7 +11,7 @@ COPY requirements.txt /tmp/requirements.txt
 
 RUN update-ca-trust extract
 #ENV PIP_INDEX_URL='XXX'
-RUN python3 -m pip install git+https://github.com/benoitc/gunicorn.git
+RUN python3 -m pip install -r /tmp/requirements.txt
 WORKDIR /app/forwarder
 ENV PYTHONUNBUFFERED=0
 ENV WEBHOOKPORT=9091
