@@ -7,11 +7,11 @@ RUN microdnf install -y python3 python3-pip
 
 #COPY certs/ /etc/pki/ca-trust/source/anchors
 #COPY forwarder/ /app/forwarder
-#COPY requirements.txt /tmp/requirements.txt
+COPY requirements.txt /tmp/requirements.txt
 
 RUN update-ca-trust extract
 ENV PIP_INDEX_URL='XXX'
-#RUN python3 -m pip install -r /tmp/requirements.txt
+RUN python3 -m pip install -r /tmp/requirements.txt
 WORKDIR /app/forwarder
 ENV PYTHONUNBUFFERED=0
 ENV WEBHOOKPORT=9091
