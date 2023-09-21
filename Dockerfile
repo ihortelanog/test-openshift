@@ -13,7 +13,6 @@ RUN update-ca-trust extract
 #ENV PIP_INDEX_URL='XXX'
 RUN python3 -m pip install -r /tmp/requirements.txt
 WORKDIR /app/forwarder
-COPY wsgi.py /app/forwarder
 ENV PYTHONUNBUFFERED=0
 ENV WEBHOOKPORT=9091
 ENTRYPOINT gunicorn --bind 0.0.0.0:${WEBHOOKPORT} --access-logfile "-" wsgi:app
