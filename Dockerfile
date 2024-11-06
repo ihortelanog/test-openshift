@@ -1,5 +1,5 @@
 FROM registry.access.redhat.com/ubi9/ubi-minimal:latest
-LABEL org.opencontainers.image.authors="XXX XXX <XXX.XXXX@XXX.de>"
+LABEL org.opencontainers.image.authors="root@example.com>"
 LABEL version="1.0.0"
 LABEL description="Alert forwarder for Prometheus/Alertmanager alerts to Splunk developyed by CaaS(XXXXXXX)"
 
